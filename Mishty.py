@@ -5,10 +5,10 @@ import os
 import textwrap
 
 # Set page config
-st.set_page_config(page_title="Hey! Misty ❤️", page_icon="💌")
+st.set_page_config(page_title="Hey! Mishty ❤️", page_icon="💌")
 
 # Title
-st.title("Hey! Misty, let's begin the story 💖")
+st.title("Hey! Mishty, let's begin the story 💖 💓")
 st.markdown("Answer these with your heart...")
 
 # Form for questions
@@ -19,6 +19,7 @@ with st.form("misty_form"):
     q4 = st.text_area("4. What is the most beautiful thing in me? 😲")
     q5 = st.text_area("5. Is there anything you want me to change? 🤔")
     q6 = st.text_area("6. What is the most beautiful thing you want to do with me? ❤️")
+    q7 = st.text_area("7. Send Your most loveable picture to your Shona 😉")
 
     submitted = st.form_submit_button("Submit 💌")
 
@@ -32,6 +33,7 @@ if submitted:
         f"4. {q4}",
         f"5. {q5}",
         f"6. {q6}",
+        f"7. {q7}",
         f"\nSubmitted on: {timestamp}"
     ]
     full_text = "\n\n".join(answers)
@@ -54,5 +56,5 @@ if submitted:
     filename = f"responses/misty_response_{datetime.now().strftime('%Y%m%d_%H%M%S')}.jpeg"
     img.save(filename)
 
-    st.success("Your answers were saved beautifully as a love note 💕")
+    st.success("Your answers were saved beautifully as a love note 💕 and Pls send the Pic to your Shona ❤️")
     st.image(filename, caption="Saved Response 💌", use_column_width=True)
